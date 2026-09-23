@@ -1,0 +1,25 @@
+{
+  "name": "glitter-glaze",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "dev:all": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "vite --port 5173",
+    "dev:backend": "cd backend && cross-env SEED_DB=true node index.js"
+
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "framer-motion": "^12.34.3",
+    "react-router-dom": "^7.13.1"
+  }
+}
